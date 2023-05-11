@@ -13,15 +13,15 @@
       var context = canvas.getContext('2d');
       
       // Cores e espessura da linha
-      context.fillStyle = 'gray';
-      context.strokeStyle = 'black';
+      context.fillStyle = 'white';
+      context.strokeStyle = 'pink';
       context.lineWidth = 2;
       
       // Primeiro arco:
       // Novo path
       context.beginPath();
       // Desenha
-      context.arc(50, 50, 40, 90*Math.PI/180, 270*Math.PI/180, false);
+      context.arc(50, 100, 87, 178*Math.PI/180, 270*Math.PI/180, false);
       // Preenchimento
       context.fill();
       // Contorno
@@ -29,7 +29,7 @@
       
       // Segundo arco
       context.beginPath();
-      context.arc(150, 50, 40, 90*Math.PI/180, 270*Math.PI/180, true);
+      context.arc(150, 100, 87, 178*Math.PI/180, 270*Math.PI/180, true);
       context.fill();
       context.stroke();
       
