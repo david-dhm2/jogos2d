@@ -5,31 +5,46 @@
 </head>
 
 <body>
-	<canvas id ="canvas_teclado_1" width="500" height="500"></canvas>
+	<canvas id ="canvas_teclado_1" width="1000" height="1000"></canvas>
 
 	<script>
 		// Referências do Canvas
 	var canvas = document.getElementById('canvas_teclado_1');
 	var context = canvas.getContext('2d');
 	// ponto de nacsimento
-	var posicao = 0;
-	desenharPersonagem();
+	var posicao = 20;
+	desenharPorco();
 	
 	document.addEventListener('keydown', function(evento) {
 		if (evento.keyCode == 37) { // Seta para esquerda
 			posicao -= 10;
-			desenharPersonagem();
-	}
-	else if (evento.keyCode == 39) { // Seta para direita
-		posicao += 10;
-		desenharPersonagem();
-	}
-});
-	// Um inimi... personagem
+			desenharPorco();
+		}else if (evento.keyCode == 39) { // Seta para direita
+			posicao += 10;
+			desenharPorco();
+		}
+	});
+	
+	// Um inimi... personagem ranzinza
 	function desenharPersonagem() {
 		context.clearRect(0, 0, canvas.width, canvas.height);
 		context.fillRect(posicao, 100, 20, 50);
-}
+	}
+	
+	// Um porco
+	function desenharPorco(){
+		//carregar o porco
+		var imagem = new Image();
+		imagem.src = 'ataque_suino.jfif';
+		
+		imagem.onload = function() {
+		
+			context.clearRect(0, 0, canvas.width, canvas.height);
+			context.drawImage(imagem, posicao, 150, 75, 75);
+		}
+	}
+	
+	
 	</script>
 	</body>
 
