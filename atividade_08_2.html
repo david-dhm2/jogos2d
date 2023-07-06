@@ -8,22 +8,9 @@
 	<script>
 	var canvas = document.getElementById('canvas_teclado_2');
 	var context = canvas.getContext('2d');
+	
 	var teclado = new Teclado();
-	// Um personagem
-	function desenharPersonagem() {
-		context.clearRect(0, 0, canvas.width, canvas.height);
-		context.fillRect(posicao, 100, 20, 50);
-	}
-	function animar(){
-		document.addEventListener('keydown', function(evento) {
-			if (evento.keyCode == 37) { // Seta para esquerda
-				posicao -= 10;
-				desenharPorco();
-			}else if (evento.keyCode == 39) { // Seta para direita
-				posicao += 10;
-				
-		}	
-	}
+	
 	</script>
 
 
