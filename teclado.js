@@ -1,6 +1,6 @@
 //isto e a aba de funções do teclado
 
-//this e um focalizador no mome horiginal do atributo
+//this e um focalizador no mome horiginal do atributo da classe
 
 //var simplesmente cria uma variavel... dicionario existe
 

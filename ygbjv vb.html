@@ -1,0 +1,31 @@
+<html>
+	<head> 
+		<title>kaboom? yes rico kaboom</title>
+		<script>
+			window.onload = function(){
+				var canvas = document.getElementById('my_canvas_homework');
+				var context = canvas.getContext('2d');		
+				
+				
+
+				//carrega area recorte do desenho canvas
+				var imaigem = new Image();
+				imaigem.src = 'img/OIP.jpg';
+				imaigem.onload = function(){
+				//posionesmes imagem
+				var x = 20;
+					
+					//desedomes imagem
+					context.drawImage(imaigem,
+								90,50,120,160,
+								370,50,170,170);
+				}					
+			}
+		</script>
+	</head>
+	
+	<body>
+		<canvas id="my_canvas_homework" width="1000" height="400"></canvas>
+		
+	</body>
+</html>
